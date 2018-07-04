@@ -18,9 +18,9 @@ def şifrele(gizlenecek_yazı, anahtar):
 
 def şifre_çöz(şifreli_yazı, anahtar):
     harfler = ['a','b','c','ç','d','e','f','g','ğ','h','ı','i','j','k','l','m','n','o','ö','p','r','s','ş','t','u','ü','v','y','z',' ', '.', ',']
-    
+
     çözülen_yazı = []
-    
+
     for şifre in şifreli_yazı:
         for harf in harfler:
             if şifre == harf:
@@ -35,27 +35,15 @@ def şifre_çöz(şifreli_yazı, anahtar):
     return ''.join(çözülen_yazı)
 
 
-işlem = int(input("Şifreleme için 1\nŞifre çözmek için 2 girin!"))
+işlem = int(input("Şifreleme için 1\nŞifre çözmek için 2 girin!\n"))
 
 if işlem == 1:
     gönder = input("Şifrelemek istediğiniz yazıyı girin: ")
-    anahtar = input("Şifreleme anahtarı girin: ")
+    anahtar = input("Şifreleme anahtarı girin:(Yalnızca Sayı) ")
     sonuç = şifrele(gönder, anahtar)
     print("şifreli:", sonuç)
 else:
     gönder = input("Çözmek istediğiniz yazıyı girin: ")
-    anahtar = input("Şifreleme anahtarı girin: ")
+    anahtar = input("Şifreleme anahtarı girin:(Yalnızca Sayı) ")
     çöz = şifre_çöz(gönder, anahtar)
     print("çözülmüş:", çöz)
-
-
-
-
-
-
-
-
-
-
-
-
